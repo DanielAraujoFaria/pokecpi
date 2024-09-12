@@ -18,7 +18,7 @@ const requests = {
 };
 
 export const Post = {
-    getPokes: (): Promise<{}> => requests.get(`pokemon`),
+    getPokes: (): Promise<[]> => requests.get(`pokemon`),
     getAPoke: (id: number): Promise<PokeType> => requests.get(`pokemon/${id}`),
     createPoke: (post: PokeType): Promise<PokeType> => requests.post(`pokemon`, post),
     deletePoke: (id: number): Promise<void> => requests.delete(`pokemon/${id}`)
